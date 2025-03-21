@@ -13,6 +13,6 @@ jobs:
       - name: Iniciar sesión en Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "joelnovo16" --password-stdin
       - name: construir imagen
-        run: docker build -t joelnovo16/subirAutomatico:latest .
+        run: docker build -t joelnovo16/subirautomatico:latest .
       - name: subir imagen a docker
-        run: docker push joelnovo16/subirAutomatico:latest
+        run: docker push joelnovo16/subirautomatico:latest
