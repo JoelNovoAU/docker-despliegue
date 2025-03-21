@@ -4,11 +4,11 @@ on:
 
 jobs:
   publish_images:
-    runs_on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
-        users: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: construir imagen
-        run: docker build -t joelnovo16/ejemplo1:latest
+        run: docker build -t joelnovo16/ejemplo1:latest .
       - name: subir imagen a docker
         run: docker push joelnovo16/ejemplo1:latest
