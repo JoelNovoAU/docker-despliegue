@@ -68,7 +68,7 @@ app.post("/api/register", async (req, res) => {
     const { email, password } = req.body;
 
     if (!email || !password) {
-      return res.status(400).json({ success: false, message: "Todos los campos son obligatorios." });
+      return res.status(400).json({ success: false, message: "Todos los campooos son obligatorios." });
     }
 
     // Verificar si el correo ya existe
