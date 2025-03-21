@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    image: restaurante-back:latest
+    container_name: restaurante
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/restaurante  # Aquí la conexión al contenedor mongo
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongodb_local
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db  # Para persistir los datos
+
+volumes:
+  mongo_data:  # Volumen que persiste los datos de MongoDB
+a:
