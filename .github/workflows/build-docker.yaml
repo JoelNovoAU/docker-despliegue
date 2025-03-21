@@ -9,7 +9,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: Iniciar sesión en Docker Hub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.joelnovo16 }}" --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "joelnovo16" --password-stdin
       - name: construir imagen
         run: docker build -t joelnovo16/ejemplo1:latest .
       - name: subir imagen a docker
